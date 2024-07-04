@@ -158,8 +158,8 @@ use_ipmitool_retries = false
 #    Y = min_command_interval
 # If use_ipmitool_retries is false, then ironic retries X times, with an
 # interval of Y in between each tries.
-min_command_interval = 5
-command_retry_timeout = 60
+min_command_interval = {{ env.IPMI_MIN_COMMAND_INTERVAL }}
+command_retry_timeout = {{ env.IPMI_COMMAND_RETRY_TIMEOUT }}
 # List of possible cipher suites versions that can be
 # supported by the hardware in case the field `cipher_suite`
 # is not set for the node. (list value)
